@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>NIOJI Frontend</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- daterange picker -->
+    <link href="assets/components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- bootstrap datepicker -->
+    <link href="assets/components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!-- DataTables -->
+    <link href="assets/components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="assets/components/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!--  Material Dashboard CSS    -->
+    <link href="assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet">
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!--     Fonts and icons     -->
+    <link href="assets/components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons" rel='stylesheet'>
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper">
+        <div class="sidebar" data-color="greenlight" data-image="assets/img/sidebar-1.jpg">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+            <div class="logo">
+                <a href="#" class="simple-text">
+                    NIOJI
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="material-icons">dashboard</i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="employees.html">
+                            <i class="material-icons">people</i>
+                            <p>Employees</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="transactions.html">
+                            <i class="material-icons">business</i>
+                            <p>Transactions</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="managecards.html">
+                            <i class="material-icons">credit_card</i>
+                            <p>Manage Cards</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="material-icons">settings</i>
+                            <p>Settings</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <nav class="navbar navbar-transparent navbar-absolute">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand text-uppercase" href="#"> Manage Cards </a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" id="btnSidebarCollpase" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-navicon fa-2x"></i>
+                                    <p class="hidden-lg hidden-md">Collapse</p>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="material-icons">notifications</i>
+                                    <span class="notification">5</span>
+                                    <p class="hidden-lg hidden-md">Notifications</p>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#"><i class="fa fa-bullhorn fa-fw fa-lg"></i>John Kyto has paid out KES500 by CASH</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-bullhorn fa-fw fa-lg"></i>James has paid out KES500 by CASH</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-bullhorn fa-fw fa-lg"></i>Michael has paid out KES500 by CASH</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-bullhorn fa-fw fa-lg"></i>Peter has paid out KES500 by CASH</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-bullhorn fa-fw fa-lg"></i>Tom has paid out KES500 by CASH</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="signin.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                                    </li>
+                                </ul>
+                                <!-- /.dropdown-user -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                            <div class="box box-card">
+                                <div class="box-header with-border">
+                                    <label class="card-title">Card 1</label>
+                                </div>
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1 text-center">
+                                            <label class="card-number">9876 54XX XXXX XXXX</label>
+                                        </div>
+                                        <div class="col-md-10 col-md-offset-1 text-right">
+                                            <label>EXPIRES 12/21</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <label>Last Active: 2 Days ago</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                            <div class="box">
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-3 col-md-offset-1 col-xs-4">
+                                            <div class="form-group">
+                                                <label class="pull-right">Card Budget</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <div class="form-group form-success label-floating">
+                                                <label class="control-label">Current Settings</label>
+                                                <input type="number" class="form-control form-sign" value="1500">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 col-md-offset-1 col-xs-4">
+                                            <div class="form-group">
+                                                <label class="pull-right">Transaction Limit</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-xs-8">
+                                            <div class="form-group form-success label-floating">
+                                                <label class="control-label">Current Settings</label>
+                                                <input type="number" class="form-control form-sign" value="15000">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 col-md-offset-1 col-xs-4">
+                                            <div class="form-group">
+                                                <label class="pull-right">Spending Limit</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-xs-4">
+                                            <div class="form-group form-success label-floating">
+                                                <label class="control-label">Current Settings</label>
+                                                <input type="number" class="form-control form-sign" value="500">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-xs-4">
+                                            <div class="form-group form-success label-floating">
+                                                <label class="control-label">LIMIT</label>
+                                                <select class="form-control">
+                                                    <option>NO LIMIT</option>
+                                                    <option selected>DAILY</option>
+                                                    <option>WEEK</option>
+                                                    <option>MONTH</option>
+                                                    <option>YEAR</option>
+                                                 </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 col-md-offset-1 col-xs-4">
+                                            <div class="form-group">
+                                                <label class="pull-right">Authorised Vendors</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-xs-8">
+                                            <div class="form-group form-success label-floating" style="min-width:100px;">
+                                                <select class="form-control select2" multiple="multiple" style="width:100%">
+                                                    <option>Fuel & Gas</option>
+                                                    <option>Restaurants</option>
+                                                    <option>ETC</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-footer">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <button id="save" type="button" class="btn btn-greenlight pull-left">SAVE</button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button id="cancel" type="button" class="btn btn-danger pull-right">CANCEL</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <footer class="footer ">
+            <div class="container-fluid ">
+                <nav class="pull-left ">
+                    <ul>
+                        <li>
+                            <a href="dashboard.html">
+                                    Dashboard
+                                </a>
+                        </li>
+                        <li>
+                            <a href="employees.html">
+                                    Employees
+                                </a>
+                        </li>
+                        <li>
+                            <a href="transactions.html">
+                                    Transactions
+                                </a>
+                        </li>
+                        <li>
+                            <a href="settings.html">
+                                    Settings
+                                </a>
+                        </li>
+                        <li>
+                            <a href="managecards.html">
+                                    Manage Cards
+                                </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <p class="copyright pull-right" style="margin-right: 5%;">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                    <a href="#">NIOJI</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    </div>
+</body>
+<!--   Core JS Files   -->
+<script src="assets/components/jquery/dist/jquery.min.js"></script>
+<script src="assets/components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/js/material.min.js"></script>
+<!--  Dynamic Elements plugin -->
+<script src="assets/js/arrive.min.js"></script>
+<!-- Select2 -->
+<script src="assets/components/select2/dist/js/select2.full.min.js"></script>
+<!-- DataTables -->
+<script src="assets/components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="assets/components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- date-range-picker -->
+<script src="assets/components/moment/min/moment.min.js"></script>
+<script src="assets/components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap datepicker -->
+<script src="assets/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!--  PerfectScrollbar Library -->
+<script src="assets/js/perfect-scrollbar.jquery.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="assets/js/bootstrap-notify.js"></script>
+<!-- Material Dashboard javascript methods -->
+<script src="assets/js/material-dashboard.js?v=1.2.0"></script>
+<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+<script src="assets/js/script.js"></script>
+
+<script type="text/javascript ">
+    $(function() {
+
+        $('#btnSidebarCollpase').click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+        //Initialize Select2 Elements
+        $('.select2').select2();
+
+        $('#save').click(function() {
+
+        });
+
+        $('#cancel').click(function() {
+            window.location.href = "managecards.html";
+        });
+
+    })
+</script>
+
+</html>
